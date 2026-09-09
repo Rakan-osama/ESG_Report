@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESG OS v14 — Final Developer Target-State Baseline (EnergyUp)</title>
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       ESG REPORTING OPERATING SYSTEM — v14 Final Developer Target-State Baseline
+       EnergyUp International · 2026-08-24
+       Architecture: 1·CONFIG (REQ-09 normative) → 2·I18N → 3·ROLES → 4·DATA →
+       5·FRAMEWORK → 6·NAVIGATION → 7·VIEWS → 8·ENGINE → 9·WORKSPACE SHELL →
+       10·REPORT RENDERER → 11·DASHBOARD → 7b·DATA CATALOG → 12·BOOT.
+
+       Split out of the single-file build, kept verbatim in _reference/ :
+         assets/app.css            the whole <style> block
+         assets/data/kpi-master.*  the KPI master, as data
+         assets/js/01…14-*.js      the script block, cut on its section boundaries
+       CLASSIC scripts sharing one global scope — the tag order below IS the
+       original execution order. Do not reorder, defer, async or modularise it.
+       Inline style="…" attributes in generated markup are left in place.
+       Regenerate: node tools/split-single-file.mjs   Verify: node tools/verify-split.mjs
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="app">
+ <div id="topbar">
+  <div class="searchBox">🔍 <input placeholder="Search" onfocus="toast('Global search (prototype)')"><span class="kbd">⌘K</span></div>
+  <span class="sep"></span>
+  <span class="demoTag" data-i="demoTag">DEMO DATA</span>
+  <span class="cyclePill" id="cyclePill"></span>
+  <select id="roleSel" title="Demo role switcher (demo control only — changes navigation, never permissions)"></select>
+  <select id="langSel"><option value="en">🌐 English</option><option value="ar">🌐 العربية</option></select>
+  <button class="iconBtn" onclick="toast('Notifications')">🔔</button>
+  <div class="avatar"><div class="av" id="avIni">LA<i></i></div><div><div class="nm" id="userTag"></div><div class="em" id="userMail">user@energyup.example</div></div></div>
+  <button class="iconBtn" title="Sign out" onclick="location.hash='#/login';render()">⎋</button>
+ </div>
+ <nav id="sidebar"></nav>
+ <main id="main"></main>
+</div>
+<div id="ovl" onclick="closeDrawer()"></div>
+<div id="drawer"></div>
+<div id="toast"></div>
+
+  <!-- data: KPI master (generated from assets/data/kpi-master.json) -->
+  <script src="assets/data/kpi-master.js"></script>
+
+  <!-- application, in the original execution order -->
+  <script src="assets/js/01-config.js"></script>
+  <script src="assets/js/02-i18n.js"></script>
+  <script src="assets/js/03-roles.js"></script>
+  <script src="assets/js/04-data.js"></script>
+  <script src="assets/js/05-framework.js"></script>
+  <script src="assets/js/06-navigation.js"></script>
+  <script src="assets/js/07-views.js"></script>
+  <script src="assets/js/08-engine.js"></script>
+  <script src="assets/js/09-workspace-shell.js"></script>
+  <script src="assets/js/10-report-renderer.js"></script>
+  <script src="assets/js/11-dashboard.js"></script>
+  <script src="assets/js/12-data-catalog.js"></script>
+  <script src="assets/js/13-data-model.js"></script>
+  <script src="assets/js/14-boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Chrome profile used by tools/shoot-dotnet.mjs to keep you signed in between runs.
+# It contains a live session cookie for the .NET app — never commit it.
+# Safe to delete at any time; re-create with:  node tools/shoot-dotnet.mjs --login
+.chrome-esg-profile/

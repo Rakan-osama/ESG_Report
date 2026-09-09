@@ -1,0 +1,209 @@
+[
+ {
+  "id": "scr-16",
+  "n": 16,
+  "cap": "B-05",
+  "route": "org/cycles",
+  "name": "Reporting Cycles",
+  "file": "scr-16-org-cycles.jpg",
+  "kb": 79
+ },
+ {
+  "id": "scr-17",
+  "n": 17,
+  "cap": "V14 operational/support view",
+  "route": "org/cycledetail",
+  "name": "ACME-FY2025",
+  "file": "scr-17-org-cycledetail.jpg",
+  "kb": 78
+ },
+ {
+  "id": "scr-18",
+  "n": 18,
+  "cap": "B-06",
+  "route": "setup/console",
+  "name": "Cycle Setup Console",
+  "file": "scr-18-setup-console.jpg",
+  "kb": 99
+ },
+ {
+  "id": "scr-19",
+  "n": 19,
+  "cap": "B-07",
+  "route": "setup/boundary",
+  "name": "Reporting Boundary",
+  "file": "scr-19-setup-boundary.jpg",
+  "kb": 100
+ },
+ {
+  "id": "scr-20",
+  "n": 20,
+  "cap": "B-08",
+  "route": "org/sector",
+  "name": "Sector Classification",
+  "file": "scr-20-org-sector.jpg",
+  "kb": 104
+ },
+ {
+  "id": "scr-21",
+  "n": 21,
+  "cap": "B-09",
+  "route": "setup/standards",
+  "name": "Applicable Standards",
+  "file": "scr-21-setup-standards.jpg",
+  "kb": 101
+ },
+ {
+  "id": "scr-22",
+  "n": 22,
+  "cap": "B-10",
+  "route": "setup/applic",
+  "name": "Disclosure Applicability",
+  "file": "scr-22-setup-applic.jpg",
+  "kb": 116
+ },
+ {
+  "id": "scr-23",
+  "n": 23,
+  "cap": "B-11",
+  "route": "setup/gri2",
+  "name": "GRI 2 Assessment",
+  "file": "scr-23-setup-gri2.jpg",
+  "kb": 106
+ },
+ {
+  "id": "scr-24",
+  "n": 24,
+  "cap": "B-13",
+  "route": "setup/omissions",
+  "name": "Omission Requests",
+  "file": "scr-24-setup-omissions.jpg",
+  "kb": 98
+ },
+ {
+  "id": "scr-25",
+  "n": 25,
+  "cap": "B-14",
+  "route": "setup/readiness",
+  "name": "Cycle Readiness",
+  "file": "scr-25-setup-readiness.jpg",
+  "kb": 96
+ },
+ {
+  "id": "scr-26",
+  "n": 26,
+  "cap": "C-01",
+  "route": "mat/config",
+  "name": "Methodology &amp; Thresholds",
+  "file": "scr-26-mat-config.jpg",
+  "kb": 92
+ },
+ {
+  "id": "scr-27",
+  "n": 27,
+  "cap": "C-02",
+  "route": "mat/context",
+  "name": "Context Register",
+  "file": "scr-27-mat-context.jpg",
+  "kb": 90
+ },
+ {
+  "id": "scr-28",
+  "n": 28,
+  "cap": "C-03",
+  "route": "mat/stake",
+  "name": "Stakeholders",
+  "file": "scr-28-mat-stake.jpg",
+  "kb": 74
+ },
+ {
+  "id": "scr-29",
+  "n": 29,
+  "cap": "C-04/C-05 consolidated",
+  "route": "mat/engage",
+  "name": "Engagement",
+  "file": "scr-29-mat-engage.jpg",
+  "kb": 100
+ },
+ {
+  "id": "scr-30",
+  "n": 30,
+  "cap": "C-06",
+  "route": "mat/impacts",
+  "name": "Impact Register",
+  "file": "scr-30-mat-impacts.jpg",
+  "kb": 106
+ },
+ {
+  "id": "scr-31",
+  "n": 31,
+  "cap": "C-07",
+  "route": "mat/assess",
+  "name": "Impact Assessment",
+  "file": "scr-31-mat-assess.jpg",
+  "kb": 113
+ },
+ {
+  "id": "scr-32",
+  "n": 32,
+  "cap": "C-08",
+  "route": "mat/diverge",
+  "name": "Divergence Reconciliation",
+  "file": "scr-32-mat-diverge.jpg",
+  "kb": 72
+ },
+ {
+  "id": "scr-33",
+  "n": 33,
+  "cap": "C-09",
+  "route": "mat/mapping",
+  "name": "Topic Mapping",
+  "file": "scr-33-mat-mapping.jpg",
+  "kb": 86
+ },
+ {
+  "id": "scr-34",
+  "n": 34,
+  "cap": "C-10",
+  "route": "mat/secrec",
+  "name": "Sector Reconciliation",
+  "file": "scr-34-mat-secrec.jpg",
+  "kb": 78
+ },
+ {
+  "id": "scr-35",
+  "n": 35,
+  "cap": "C-11",
+  "route": "mat/ranking",
+  "name": "Topics &amp; Ranking",
+  "file": "scr-35-mat-ranking.jpg",
+  "kb": 103
+ },
+ {
+  "id": "scr-36",
+  "n": 36,
+  "cap": "C-12",
+  "route": "mat/approval",
+  "name": "Governance Approval",
+  "file": "scr-36-mat-approval.jpg",
+  "kb": 101
+ },
+ {
+  "id": "scr-37",
+  "n": 37,
+  "cap": "GRI 3-3 management extension",
+  "route": "mat/topicmgmt",
+  "name": "Material Topic Management — MT-01",
+  "file": "scr-37-mat-topicmgmt.jpg",
+  "kb": 95
+ },
+ {
+  "id": "scr-38",
+  "n": 38,
+  "cap": "ESG risk extension (non-GRI-materiality)",
+  "route": "mat/risk",
+  "name": "ESG Risks &amp; Opportunities",
+  "file": "scr-38-mat-risk.jpg",
+  "kb": 89
+ }
+]

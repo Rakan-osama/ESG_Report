@@ -1,0 +1,905 @@
+[
+ {
+  "code": "B-05",
+  "route": "org/cycles",
+  "file": "assets/js/07-views.js",
+  "line": 215,
+  "chars": 6395,
+  "tables": [
+   [
+    "Cycle",
+    "Period",
+    "Publication",
+    "Intent",
+    "Claim ⚙",
+    "Phase"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 3,
+  "reads": [
+   "cycle"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "cycleForm",
+    "stub": true,
+    "snippet": "drawer(t('add')+' — quick',cycleForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~",
+   "🧭 ~"
+  ],
+  "anchors": [
+   "toast('Read-only — locked period')",
+   "toast('Read-only')"
+  ],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "B-15",
+  "route": "org/cycledetail",
+  "file": "assets/js/09-workspace-shell.js",
+  "line": 143,
+  "chars": 3713,
+  "tables": [],
+  "tablesNoThead": 0,
+  "literalRows": 0,
+  "reads": [
+   "audit",
+   "cycle",
+   "evidence"
+  ],
+  "drawers": [],
+  "buttons": [
+   "⬇ ~",
+   "🚦 ~"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "B-06",
+  "route": "setup/console",
+  "file": "assets/js/07-views.js",
+  "line": 264,
+  "chars": 8125,
+  "tables": [
+   [
+    "#",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ],
+   [
+    "~",
+    "Financial",
+    "Sustainability — ~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 4,
+  "reads": [
+   "bndDraft",
+   "cycle"
+  ],
+  "drawers": [
+   {
+    "args": 3,
+    "form": "",
+    "stub": false,
+    "snippet": "drawer('${LANG==='ar'?'التخلي عن التهيئة':'Abandon setup'}',\\`<div class=formGrid>\\${field({label:'Abandon rea"
+   }
+  ],
+  "buttons": [
+   "~",
+   "~ ~ · ~",
+   "~",
+   "~ →",
+   "🔒 ~"
+  ],
+  "anchors": [
+   "location.hash='#/${r[7]}';render()"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "B-07",
+  "route": "setup/boundary",
+  "file": "assets/js/07-views.js",
+  "line": 316,
+  "chars": 6810,
+  "tables": [
+   [
+    "Member",
+    "Financial",
+    "Sustainability",
+    "GHG org.",
+    "Applied share",
+    "Note"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 5,
+  "reads": [
+   "cycle"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "bndBasisForm",
+    "stub": true,
+    "snippet": "drawer('${LANG==='ar'?'أساس الحدود':'Boundary basis'} — v3',bndBasisForm())"
+   }
+  ],
+  "buttons": [
+   "~",
+   "~"
+  ],
+  "anchors": [
+   "toast('Evidence object')"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "B-08",
+  "route": "org/sector",
+  "file": "assets/js/07-views.js",
+  "line": 206,
+  "chars": 2243,
+  "tables": [
+   [
+    "Sector (taxonomy)",
+    "Primary",
+    "Resolved standard ⚙",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "sectors"
+  ],
+  "drawers": [
+   {
+    "args": 3,
+    "form": "secClsForm",
+    "stub": false,
+    "snippet": "drawer('＋ '+(LANG==='ar'?'إضافة تصنيف قطاع':'Add sector classification'),secClsForm(),secClsFoot())"
+   }
+  ],
+  "buttons": [
+   "＋ ~"
+  ],
+  "anchors": [
+   "toast('${LANG==='ar'?'الأساس + الدليل (قراءة)':'Basis + evidence (read-only)'}')",
+   "secClsApprove('${r.id}')",
+   "toast('${LANG==='ar'?'استكمال المسودة':'Continue draft'}')"
+  ],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": [
+   "secClsApprove('${r.id}')"
+  ]
+ },
+ {
+  "code": "B-09",
+  "route": "setup/standards",
+  "file": "assets/js/07-views.js",
+  "line": 367,
+  "chars": 2845,
+  "tables": [
+   [],
+   [],
+   [],
+   []
+  ],
+  "tablesNoThead": 4,
+  "literalRows": 7,
+  "reads": [],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "electForm",
+    "stub": true,
+    "snippet": "drawer('Early-adoption decision — GRI 102:2025',electForm())"
+   }
+  ],
+  "buttons": [
+   "Restate",
+   "Decide"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": [
+   "Decide"
+  ]
+ },
+ {
+  "code": "B-10",
+  "route": "setup/applic",
+  "file": "assets/js/07-views.js",
+  "line": 385,
+  "chars": 3893,
+  "tables": [],
+  "tablesNoThead": 0,
+  "literalRows": 0,
+  "reads": [],
+  "drawers": [],
+  "buttons": [
+   "~",
+   "~"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "B-11",
+  "route": "setup/gri2",
+  "file": "assets/js/07-views.js",
+  "line": 411,
+  "chars": 6886,
+  "tables": [
+   [
+    "Datapoint",
+    "Value",
+    "Readiness",
+    "Source",
+    "Evidence"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 4,
+  "reads": [],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "dpEntryForm",
+    "stub": true,
+    "snippet": "drawer('Datapoint — Total non-employee workers',dpEntryForm())"
+   },
+   {
+    "args": 2,
+    "form": "dpEntryForm",
+    "stub": true,
+    "snippet": "drawer('Datapoint',dpEntryForm())"
+   },
+   {
+    "args": 2,
+    "form": "dpEntryForm",
+    "stub": true,
+    "snippet": "drawer('Datapoint',dpEntryForm())"
+   }
+  ],
+  "buttons": [],
+  "anchors": [
+   "drawer('Datapoint — Total non-employee workers',dpEntryForm())",
+   "drawer('Datapoint',dpEntryForm())",
+   "drawer('Datapoint',dpEntryForm())",
+   "toast('Evidence uploaded — SHA-256 computed server-side · metadata drawer opens'"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "B-13",
+  "route": "setup/omissions",
+  "file": "assets/js/07-views.js",
+  "line": 458,
+  "chars": 6564,
+  "tables": [
+   [
+    "Ref",
+    "Disclosure",
+    "Reason",
+    "~",
+    "Approver"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "omissions"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "omForm",
+    "stub": true,
+    "snippet": "drawer('${t('add')} — Omission request',omForm())"
+   },
+   {
+    "args": 2,
+    "form": "omDetail",
+    "stub": true,
+    "snippet": "drawer('${o.id}',omDetail('${o.id}'))"
+   },
+   {
+    "args": 3,
+    "form": "",
+    "stub": false,
+    "snippet": "drawer('⛔ OMISSION_NOT_PERMITTED',`<div class=\"notice err\"><b>HTTP 422</b> — <span data-noar>{\"error\":\"OMISSIO"
+   }
+  ],
+  "buttons": [
+   "＋ ~",
+   "~"
+  ],
+  "anchors": [
+   "drawer('${o.id}',omDetail('${o.id}'))",
+   "tryBlockedOmission()"
+  ],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "B-14",
+  "route": "setup/readiness",
+  "file": "assets/js/08-engine.js",
+  "line": 681,
+  "chars": 4060,
+  "tables": [
+   [
+    "Gate",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "gates"
+  ],
+  "drawers": [],
+  "buttons": [
+   "↻ ~"
+  ],
+  "anchors": [
+   "location.hash='#/${r[10]}';render()"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": true,
+  "submitish": []
+ },
+ {
+  "code": "C-01",
+  "route": "mat/config",
+  "file": "assets/js/07-views.js",
+  "line": 503,
+  "chars": 1598,
+  "tables": [],
+  "tablesNoThead": 0,
+  "literalRows": 0,
+  "reads": [],
+  "drawers": [],
+  "buttons": [],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-02",
+  "route": "mat/context",
+  "file": "assets/js/07-views.js",
+  "line": 512,
+  "chars": 1684,
+  "tables": [
+   [
+    "ID",
+    "Type",
+    "P",
+    "Description",
+    "Where",
+    "Source",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 6,
+  "reads": [],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "ctxForm",
+    "stub": true,
+    "snippet": "drawer(t('add')+' — Context entry',ctxForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~"
+  ],
+  "anchors": [],
+  "hasAdd": true,
+  "hasToolbar": true,
+  "hasPager": true,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-03",
+  "route": "mat/stake",
+  "file": "assets/js/07-views.js",
+  "line": 522,
+  "chars": 1361,
+  "tables": [
+   [
+    "Group",
+    "Class",
+    "Where",
+    "Influence",
+    "Dependency",
+    "Engagement",
+    "Owner"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 6,
+  "reads": [],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "stkForm",
+    "stub": true,
+    "snippet": "drawer(t('add')+' — Stakeholder group',stkForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~"
+  ],
+  "anchors": [],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-04",
+  "route": "mat/engage",
+  "file": "assets/js/08-engine.js",
+  "line": 312,
+  "chars": 5193,
+  "tables": [
+   [
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ],
+   [
+    "ID",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 9,
+  "reads": [
+   "divergences"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "engPlanForm",
+    "stub": true,
+    "snippet": "drawer('${LANG==='ar'?'إضافة بند خطة مشاركة':'Add engagement plan item'}',engPlanForm())"
+   },
+   {
+    "args": 2,
+    "form": "engForm",
+    "stub": true,
+    "snippet": "drawer('${LANG==='ar'?'تسجيل مشاركة':'Record engagement'}',engForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~",
+   "＋ ~"
+  ],
+  "anchors": [],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-06",
+  "route": "mat/impacts",
+  "file": "assets/js/07-views.js",
+  "line": 533,
+  "chars": 1286,
+  "tables": [
+   [
+    "ID",
+    "Impact",
+    "P",
+    "Type",
+    "Where",
+    "Origin 🔗",
+    "Sev",
+    "Lik",
+    "Significance ƒx",
+    "Topic"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "impacts"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "impForm",
+    "stub": true,
+    "snippet": "drawer(t('add')+' — Impact',impForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~"
+  ],
+  "anchors": [],
+  "hasAdd": true,
+  "hasToolbar": true,
+  "hasPager": true,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-07",
+  "route": "mat/assess",
+  "file": "assets/js/07-views.js",
+  "line": 541,
+  "chars": 2358,
+  "tables": [],
+  "tablesNoThead": 0,
+  "literalRows": 0,
+  "reads": [
+   "impacts"
+  ],
+  "drawers": [],
+  "buttons": [
+   "~",
+   "~"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-08",
+  "route": "mat/diverge",
+  "file": "assets/js/08-engine.js",
+  "line": 349,
+  "chars": 3101,
+  "tables": [
+   [
+    "ID",
+    "~",
+    "~",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "divergences",
+   "sectopics"
+  ],
+  "drawers": [
+   {
+    "args": 3,
+    "form": "divForm",
+    "stub": false,
+    "snippet": "drawer('${LANG==='ar'?'تسوية':'Resolve'} — ${d.id}',divForm('${d.id}'),divFoot('${d.id}'))"
+   }
+  ],
+  "buttons": [
+   "~"
+  ],
+  "anchors": [
+   "drawer('${LANG==='ar'?'تسوية':'Resolve'} — ${d.id}',divForm('${d.id}'),divFoot('",
+   "toast('${esc(d.res)}')"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": [
+   "drawer('${LANG==='ar'?'تسوية':'Resolve'} — ${d.id}',divForm('${d.id}'),divFoot('"
+  ]
+ },
+ {
+  "code": "C-09",
+  "route": "mat/mapping",
+  "file": "assets/js/07-views.js",
+  "line": 560,
+  "chars": 1640,
+  "tables": [
+   [
+    "Impact",
+    "→ Topic",
+    "→ GRI Standard",
+    "Sector expectation",
+    "~"
+   ],
+   []
+  ],
+  "tablesNoThead": 1,
+  "literalRows": 7,
+  "reads": [],
+  "drawers": [],
+  "buttons": [],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-10",
+  "route": "mat/secrec",
+  "file": "assets/js/08-engine.js",
+  "line": 368,
+  "chars": 2903,
+  "tables": [
+   [
+    "~",
+    "~",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "sectopics"
+  ],
+  "drawers": [
+   {
+    "args": 3,
+    "form": "secExpForm",
+    "stub": false,
+    "snippet": "drawer('${LANG==='ar'?'شرح عدم الجوهرية':'Explain not material'}',secExpForm(${i}),secExpFoot(${i}))"
+   }
+  ],
+  "buttons": [
+   "~",
+   "~"
+  ],
+  "anchors": [
+   "secDecide(${i},'confirmed')",
+   "drawer('${LANG==='ar'?'شرح عدم الجوهرية':'Explain not material'}',secExpForm(${i",
+   "secDecide(${i},'candidate')",
+   "audit('materiality.escalate','${esc(x.n)}','to Methodology Owner');toast('Escala"
+  ],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": [
+   "secDecide(${i},'confirmed')",
+   "secDecide(${i},'candidate')",
+   "audit('materiality.escalate','${esc(x.n)}','to Methodology Owner');toast('Escala"
+  ]
+ },
+ {
+  "code": "C-11",
+  "route": "mat/ranking",
+  "file": "assets/js/08-engine.js",
+  "line": 380,
+  "chars": 3046,
+  "tables": [
+   [
+    "~",
+    "P",
+    "~",
+    "~ ƒx",
+    "GRI",
+    "~",
+    "~"
+   ],
+   []
+  ],
+  "tablesNoThead": 1,
+  "literalRows": 3,
+  "reads": [
+   "divergences",
+   "excluded",
+   "sectopics",
+   "topics"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "rankRatForm",
+    "stub": true,
+    "snippet": "drawer('${LANG==='ar'?'مبرر القرار':'Decision rationale'} — ${tp.id}',rankRatForm('${tp.id}'))"
+   }
+  ],
+  "buttons": [
+   "~ →"
+  ],
+  "anchors": [
+   "drawer('${LANG==='ar'?'مبرر القرار':'Decision rationale'} — ${tp.id}',rankRatFor"
+  ],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-13",
+  "route": "mat/topicmgmt",
+  "file": "assets/js/12-data-catalog.js",
+  "line": 116,
+  "chars": 6390,
+  "tables": [],
+  "tablesNoThead": 0,
+  "literalRows": 0,
+  "reads": [
+   "cidx",
+   "evidence",
+   "impacts",
+   "restatementsReg",
+   "topicSet",
+   "topics"
+  ],
+  "drawers": [],
+  "buttons": [
+   "← ~",
+   "~ →"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-12",
+  "route": "mat/approval",
+  "file": "assets/js/07-views.js",
+  "line": 573,
+  "chars": 1651,
+  "tables": [
+   [
+    "Topic",
+    "Impacts & rationale",
+    "Stakeholders",
+    "Sector req.",
+    "Decision"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "topicSet",
+   "topics"
+  ],
+  "drawers": [],
+  "buttons": [
+   "~",
+   "✓ ~"
+  ],
+  "anchors": [],
+  "hasAdd": false,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ },
+ {
+  "code": "C-14",
+  "route": "mat/risk",
+  "file": "assets/js/13-data-model.js",
+  "line": 409,
+  "chars": 3722,
+  "tables": [
+   [
+    "ID",
+    "Risk / Opportunity",
+    "Topic 🔗",
+    "KPIs 🔗",
+    "Inherent",
+    "Controls",
+    "Residual ⚙",
+    "~",
+    "~"
+   ]
+  ],
+  "tablesNoThead": 0,
+  "literalRows": 2,
+  "reads": [
+   "risks"
+  ],
+  "drawers": [
+   {
+    "args": 2,
+    "form": "riskForm",
+    "stub": true,
+    "snippet": "drawer('＋ Risk',riskForm())"
+   }
+  ],
+  "buttons": [
+   "＋ ~"
+  ],
+  "anchors": [
+   "toast('Evidence object')"
+  ],
+  "hasAdd": true,
+  "hasToolbar": false,
+  "hasPager": false,
+  "hasRail": false,
+  "submitish": []
+ }
+]

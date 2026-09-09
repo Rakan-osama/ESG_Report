@@ -21,7 +21,15 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, '_reference/single-file-formatted.html');
-const ENTRY = path.join(ROOT, '24_ESG_OS_v14_FinalDeveloperBaseline.html');
+/* The entry HTML is whichever root .html loads the split app, so renaming it
+   (24_ESG_OS_v14_FinalDeveloperBaseline.html → v14.html → …) does not break the build. */
+const ENTRY = path.join(ROOT, findEntry());
+function findEntry() {
+  const hit = fs.readdirSync(ROOT).filter(f => f.toLowerCase().endsWith('.html'))
+    .find(f => fs.readFileSync(path.join(ROOT, f), 'utf8').includes('assets/js/01-config.js'));
+  if (!hit) throw new Error('no root .html loads assets/js/01-config.js — entry HTML not found');
+  return hit;
+}
 const BANNER_LINES = 5;
 
 const die = m => { console.error('ABORT: ' + m); process.exit(1); };
